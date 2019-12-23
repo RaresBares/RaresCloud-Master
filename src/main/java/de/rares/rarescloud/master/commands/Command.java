@@ -8,6 +8,7 @@ public interface Command {
 
      void execute(String key);
     List<String> getName();
+    String getHelpMessage();
 
 
 }
