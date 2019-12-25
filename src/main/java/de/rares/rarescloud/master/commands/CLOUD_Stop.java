@@ -1,8 +1,8 @@
 package de.rares.rarescloud.master.commands;
 
 
+import de.rares.rarescloud.master.Log;
 import de.rares.rarescloud.master.MyLog;
-import sun.rmi.runtime.Log;
 
 import java.util.Arrays;
 import java.util.List;
@@ -11,7 +11,7 @@ public class CLOUD_Stop implements Command{
 
 
     public CLOUD_Stop(){
-        MyLog.log("Stop-Command initialisiert");
+        MyLog.log("Stop-Command initialisiert", Log.INFO);
     }
     public void execute(String key) {
         if(getName().contains(key))

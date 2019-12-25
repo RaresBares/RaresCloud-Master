@@ -1,10 +1,7 @@
 package de.rares.rarescloud.master.master;
 
 
-import de.rares.rarescloud.master.commands.CLOUD_Help;
-import de.rares.rarescloud.master.commands.CLOUD_Info;
-import de.rares.rarescloud.master.commands.Command;
-import de.rares.rarescloud.master.commands.CLOUD_Stop;
+import de.rares.rarescloud.master.commands.*;
 import de.rares.rarescloud.master.listener.MessageWaiter;
 
 
@@ -32,6 +29,7 @@ public class Master {
     }
     public static void registercommands(){
         Runnable r = () -> {
+            registerCommand(new CLOUD_Init());
             registerCommand(new CLOUD_Stop());
             registerCommand(new CLOUD_Help());
             registerCommand(new CLOUD_Info());

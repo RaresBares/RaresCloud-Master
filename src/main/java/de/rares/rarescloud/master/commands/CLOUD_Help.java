@@ -1,5 +1,6 @@
 package de.rares.rarescloud.master.commands;
 
+import de.rares.rarescloud.master.Log;
 import de.rares.rarescloud.master.MyLog;
 import de.rares.rarescloud.master.master.Master;
 
@@ -10,7 +11,7 @@ public class CLOUD_Help implements Command{
 
     public CLOUD_Help(){
 
-        MyLog.log("HelpCommand initialisiert");
+        MyLog.log("HelpCommand initialisiert", Log.INFO);
 
     }
 

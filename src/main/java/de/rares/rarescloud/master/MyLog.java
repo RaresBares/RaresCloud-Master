@@ -6,11 +6,12 @@ import java.util.Date;
 public class MyLog {
 
 
-
-    public static void log(String msg){
+    public static void log(String msg, Log log) {
 
 
         SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
-        System.out.println(sdf.format(new Date())  + " <|> " + msg);
+        System.out.println(sdf.format(new Date()) + " <|" + log.getName() + "|> " + msg);
     }
 }
+
+
