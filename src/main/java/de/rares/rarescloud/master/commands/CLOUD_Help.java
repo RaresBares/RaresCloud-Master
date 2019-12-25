@@ -3,7 +3,6 @@ package de.rares.rarescloud.master.commands;
 import de.rares.rarescloud.master.MyLog;
 import de.rares.rarescloud.master.master.Master;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -16,8 +15,10 @@ public class CLOUD_Help implements Command{
     }
 
     public void execute(String key) {
-        for(Command c : Master.commands){
-            System.out.println(c.getName().get(1) + " " +  c.getHelpMessage());
+        if(getName().contains(key)) {
+            for (Command c : Master.commands) {
+                System.out.println(c.getName().get(1) + " " + c.getHelpMessage());
+            }
         }
     }
 

@@ -1,10 +1,12 @@
 package de.rares.rarescloud.master.master;
 
+
 import de.rares.rarescloud.master.commands.CLOUD_Help;
 import de.rares.rarescloud.master.commands.CLOUD_Info;
 import de.rares.rarescloud.master.commands.Command;
-import de.rares.rarescloud.master.commands.MASTER_Stop;
+import de.rares.rarescloud.master.commands.CLOUD_Stop;
 import de.rares.rarescloud.master.listener.MessageWaiter;
+
 
 import java.util.ArrayList;
 
@@ -24,14 +26,15 @@ public class Master {
         new MessageWaiter().start();
 
 
+
+
+
     }
     public static void registercommands(){
-        Runnable r = new Runnable() {
-            public void run() {
-                registerCommand(new MASTER_Stop());
-                registerCommand(new CLOUD_Help());
-                registerCommand(new CLOUD_Info());
-            }
+        Runnable r = () -> {
+            registerCommand(new CLOUD_Stop());
+            registerCommand(new CLOUD_Help());
+            registerCommand(new CLOUD_Info());
         };
         Thread t = new Thread(r);
         t.start();
@@ -50,6 +53,34 @@ public class Master {
         Thread t = new Thread(r);
         t.start();
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    private final static String QUEUE_NAME = "hello";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }

@@ -14,12 +14,12 @@ public class CLOUD_Info implements Command{
     }
     public void execute(String key) {
 
+if(getName().contains(key)) {
 
-
-        System.out.println("<--------------------------------->");
-        System.out.println("Operating System -> " + System.getProperties().getProperty("os.name"));
-        System.out.println("<--------------------------------->");
-
+    System.out.println("<--------------------------------->");
+    System.out.println("Operating System -> " + System.getProperties().getProperty("os.name"));
+    System.out.println("<--------------------------------->");
+}
     }
 
     public List<String> getName() {

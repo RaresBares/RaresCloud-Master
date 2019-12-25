@@ -3,7 +3,6 @@ package de.rares.rarescloud.master.listener;
 import de.rares.rarescloud.master.commands.Command;
 import de.rares.rarescloud.master.master.Master;
 
-import javax.annotation.PostConstruct;
 import java.util.Scanner;
 
 public class MessageWaiter extends Thread{

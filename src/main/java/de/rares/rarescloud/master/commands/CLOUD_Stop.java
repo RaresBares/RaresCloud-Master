@@ -7,10 +7,10 @@ import sun.rmi.runtime.Log;
 import java.util.Arrays;
 import java.util.List;
 
-public class MASTER_Stop implements Command{
+public class CLOUD_Stop implements Command{
 
 
-    public MASTER_Stop(){
+    public CLOUD_Stop(){
         MyLog.log("Stop-Command initialisiert");
     }
     public void execute(String key) {
